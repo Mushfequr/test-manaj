@@ -29,14 +29,13 @@ public class XrayInitializer {
      * @param reportDir         the report dir
      * @param infoJson          the info json
      * @param filesList         the files list
-     * @param xAtlassianToken   the x atlassian token
      * @throws IOException              the io exception
      * @throws NoSuchAlgorithmException the no such algorithm exception
      * @throws KeyManagementException   the key management exception
      */
-    public void importTestExecutionResults(File authDataFile, File multipartDataFile, File reportDir, File infoJson, List<File> filesList, String xAtlassianToken) throws IOException, NoSuchAlgorithmException, KeyManagementException {
+    public void importTestExecutionResults(File authDataFile, File multipartDataFile, File reportDir, File infoJson, List<File> filesList) throws IOException, NoSuchAlgorithmException, KeyManagementException {
         ImportExecution obj = new ImportExecutionImpl();
-        obj.importResults(authDataFile, multipartDataFile, reportDir, infoJson, filesList, xAtlassianToken);
+        obj.importResults(authDataFile, multipartDataFile, reportDir, infoJson, filesList);
 
     }
 

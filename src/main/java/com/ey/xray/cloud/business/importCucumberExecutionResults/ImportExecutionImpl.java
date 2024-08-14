@@ -19,7 +19,7 @@ import org.json.simple.parser.ParseException;
  */
 public class ImportExecutionImpl implements ImportExecution {
 
-    public void importResults(File authDataFile, File multipartDataFile, File reportDir, File infoJson, List<File> filesList, String xAtlassianToken) throws IOException, NoSuchAlgorithmException, KeyManagementException {
+    public void importResults(File authDataFile, File multipartDataFile, File reportDir, File infoJson, List<File> filesList) throws IOException, NoSuchAlgorithmException, KeyManagementException {
         //Creating a JSONParser object
         JSONParser jsonParser = new JSONParser();
         try {
@@ -45,6 +45,7 @@ public class ImportExecutionImpl implements ImportExecution {
             //Make API call to import execution results to JIRA
             String url = multipartData.get("BaseUrl").toString() + multipartData.get("ImportExecutionPath").toString();
             String jiraUrl = multipartData.get("JiraBaseUrl").toString() + multipartData.get("JiraPath").toString();
+            String xAtlassianToken = authData.get("xAtlassianToken").toString();
 
             URL multipartUrl = new URL(url);
             URL jiraUrlEndpoint = new URL(jiraUrl);

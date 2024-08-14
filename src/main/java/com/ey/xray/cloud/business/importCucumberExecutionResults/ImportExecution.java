@@ -20,7 +20,7 @@ public interface ImportExecution {
      * @throws NoSuchAlgorithmException the no such algorithm exception
      * @throws KeyManagementException   the key management exception
      */
-    public void importResults(File authDataFile, File multipartDataFile, File reportDir, File infoJson, List<File> filesList, String xAtlassianToken) throws IOException, NoSuchAlgorithmException, KeyManagementException;
+    public void importResults(File authDataFile, File multipartDataFile, File reportDir, File infoJson, List<File> filesList) throws IOException, NoSuchAlgorithmException, KeyManagementException;
 
 
 }
