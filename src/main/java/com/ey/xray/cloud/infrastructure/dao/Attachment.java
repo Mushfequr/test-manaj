@@ -1,4 +1,4 @@
-package cloud.infrastructure.dao;
+package com.ey.xray.cloud.infrastructure.dao;
 
 public class Attachment {
     private String filePath;
